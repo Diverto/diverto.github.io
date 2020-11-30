@@ -76,7 +76,7 @@ export PATH=$HOME/src/depot_tools:$PATH
 fetch devtools-frontend
 ```
 
-After fetching the needed tools, you can set your own limit. Patch example is here:
+After fetching the needed tools, you can set your own limit. Patch example is [here](https://github.com/Diverto/browser-wasm-limit/blob/main/chromium-devtools-wasm-limit.diff):
 
 ```
 diff --git a/front_end/wasmparser_worker/WasmParserWorker.js b/front_end/wasmparser_worker/WasmParserWorker.js
@@ -148,9 +148,9 @@ ac_add_options --enable-artifact-builds
 mk_add_options MOZ_OBJDIR=./objdir-frontend
 ```
 
-Grab the patch from the [Diverto Git](https://github.com/Diverto) page and apply it:
-
+Grab the patch from the [firefox-wasm-limit](https://github.com/Diverto/browser-wasm-limit/blob/main/firefox-wasm-limit.diff) repository and apply it:
 ```
+wget https://raw.githubusercontent.com/Diverto/browser-wasm-limit/main/firefox-wasm-limit.diff
 patch -p1 < firefox-wasm-limit.diff
 ```
 
@@ -182,6 +182,7 @@ While WebAssembly is not new technology any more, there are still lot of space f
 
 Tools mentioned in this article:
 
+ - [browser-wasm-limit](https://github.com/Diverto/browser-wasm-limit) - patches to browser to change WASM limit
  - [gn](https://gn.googlesource.com/gn) - a meta-build system that generates build files for Ninja
  - [wabt](https://github.com/WebAssembly/wabt) - The WebAssembly Binary Toolkit
  - [wasabi](https://github.com/danleh/wasabi) - WebAssembly and instrumenting with Wasabi
