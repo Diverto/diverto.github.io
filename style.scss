@@ -25,7 +25,6 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
   padding: 0 10px;
   width: 100%;
 }
@@ -104,6 +103,11 @@ em, i {
 
 strong, b {
   font-weight: bold;
+}
+
+table {
+   margin-left:auto;
+   margin-right:auto;
 }
 
 img {
