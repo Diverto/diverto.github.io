@@ -55,6 +55,7 @@ baseurl: ""
 
 # permalink: /:title/
 permalink: /:year/:month/:day/:title
+# excerpt_separator: <!--more-->
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
@@ -96,6 +97,12 @@ authors:
   bojan:
     display_name: Bojan
     gravatar: fd2d5ba1b685b584da36131439c3de96
+  goran:
+    display_name: Goran Martinic
+    gravatar: 21319cc053883e30af00e312a17e5bbb
+  Ivan:
+    display_name: Ivan Zelic
+    gravatar: 9cc12a0deb5687eff6c4537decba5acd
   antonio:
     display_name: Antonio Zekic
     gravatar: a0286d1951581eb517b8f167d0c50d3f
