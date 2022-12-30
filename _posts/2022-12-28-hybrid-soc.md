@@ -11,7 +11,7 @@ otherLanguages:
 - locale: hr
   path: /hr/blog/hybrid-soc
 ---
-Let’s think of situation where your organization have too few people who work in security or they lack skills to perform advanced analyses usually assigned to Tier 2/3. For example, you have a couple of security analysts who are more than able to perform triage and maybe handle less complicated incidents. Now that’s when hybrid SOC model comes in.
+Let’s think of a situation where your organization have too few people who work in security or they lack skills to perform advanced analyses usually assigned to Tier 2/3. For example, you have a couple of security analysts who are more than able to perform triage and maybe handle less complicated incidents. Now that’s when hybrid SOC model comes in.
 
 If you are reading this page, chances are you already know what Security Operations Centre, or SOC, is. Nevertheless, let’s take a moment to review the basics.
 
