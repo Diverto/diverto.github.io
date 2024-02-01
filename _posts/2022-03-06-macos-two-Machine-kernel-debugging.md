@@ -206,7 +206,7 @@ When using other kernel variants, several steps must be taken:
     entire /System directory of the KDK into the /System directory of
     your mounted disk:
 
-```sudo ditto /Library/Developer/KDKs/<KDK Version>/System/Users/<USERNAME>/livemount/System```
+```sudo ditto /Library/Developer/KDKs/<KDK Version>/System /Users/<USERNAME>/livemount/System```
 
 -   Rebuild the kernel collections for the variants you added to your
     mounted disk and “bless” them to authorize booting from your
