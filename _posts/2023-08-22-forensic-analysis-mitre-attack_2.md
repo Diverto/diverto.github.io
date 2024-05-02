@@ -13,9 +13,7 @@ otherLanguages:
 - locale: hr
   path: /hr/blog/2023-08-22-forensic-analysis-mitre-attack-2
 ---
-
-
-In the previous blog [**Forensic analysis of MITRE ATT&CK Techniques - PART 1**](https://www.diverto.hr/en/blog/2022-12-18-forensic-analysis-mitre-attack/)
+In the previous blog [**Forensic analysis of MITRE ATT&CK Techniques - PART 1**]({% post_url 2022-12-18-forensic-analysis-mitre-attack %})
 the first phase of the adversary was explained. In that phase the adversary achieved his goal by 
 obtaining and abusing the credentials of existing local account to gain initial access to the system. 
 Looking at the MITRE ATT&CK framework, the next goal of the adversary is to run malicious code on the system.
@@ -64,6 +62,7 @@ In the picture below we can see the evidence of PowerShell execution. The advers
 
 
 ![Obfuscated PowerShell command](/images/2023-08-22-forensic-analysis-mitre-attack/image2.png)
+
 *Figure 2. Obfuscated PowerShell command*
 
 An adversary typically uses obfuscation commands to conceal command and control communication, to evade detection by a signature-based 
@@ -78,11 +77,13 @@ When the obfuscated text was copied into *CyberChef* and the ***From Base64*** d
 
 
 ![De-obfuscated PowerShell command](/images/2023-08-22-forensic-analysis-mitre-attack/image3.png)
+
 *Figure 3. De-obfuscated PowerShell command*
 
 Additionally, ***Remove null bytes*** can be selected to make it more readable.
 
 ![De-obfuscated PowerShell command – Remove null bytes](/images/2023-08-22-forensic-analysis-mitre-attack/image4.png)
+
 *Figure 4. De-obfuscated PowerShell command – Remove null bytes*
 
 From the command above, we can see that the adversary used the *BITSAdmin* command-line tool (*Background Intelligent Transfer Service Admin*) 
@@ -93,9 +94,11 @@ extracted and executed. The malicious file was Ransomware that encrypted the ent
 ***Evidence of the file location on the disk and from $MFT***
 
 ![File location on the disk](/images/2023-08-22-forensic-analysis-mitre-attack/image5.png)
+
 *Figure 5. File location on the disk*
 
 ![File creation evidence in the $MFT](/images/2023-08-22-forensic-analysis-mitre-attack/image6.png)
+
 *Figure 6. File creation evidence in the $MFT*
 
 
@@ -114,22 +117,26 @@ In the picture below we can see the evidence of Scheduled Task Execution. The ad
 started a scheduled task to execute the Powershell script.
 
 ![Scheduled Task execution](/images/2023-08-22-forensic-analysis-mitre-attack/image7.png)
+
 *Figure 7. Scheduled Task execution*
 
 The Powershell command was obfuscated.
 
 ![Obfuscated PowerShell command](/images/2023-08-22-forensic-analysis-mitre-attack/image8.png)
+
 *Figure 8. Obfuscated PowerShell command*
 
 After de-obfuscate that PowerShell command with *CyberChef*, the result is as follows:
 
 ![De-obfuscated PowerShell command](/images/2023-08-22-forensic-analysis-mitre-attack/image9.png)
+
 *Figure 9. De-obfuscated PowerShell command*
 
 From the command above, we can see that the adversary downloaded the malicious file ***flash.exe*** from the 
 remote location to the ***C:\\Windows\\Temp\\*** location. After that, the file was executed. 
 
 ![File execution](/images/2023-08-22-forensic-analysis-mitre-attack/image10.png)
+
 *Figure 10. Program execution*
 
 An adversary managed to run a malicious file on the system. It used Powershell and Windows Task Scheduler to execute malicious code. 
