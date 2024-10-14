@@ -110,7 +110,7 @@ worse):
 
 3. *Didn't click and didn't report*
 
-4. *Clicked and didn't record*
+4. *Clicked and didn't report*
 
 Let's say that we have 4 different employees that are being tested, Amy,
 John, Doug, and Winston.
