@@ -131,7 +131,7 @@ following *wbadmin* command to achieve his goal:
 
 In the **NTDS.dit** file everything is encrypted, so an adversary needs that local **SYSTEM** file if he wants to decrypt. 
 The **SYSTEM** file contains critical system configuration information, including sensitive data such as cached credentials, 
-SAM (*Security Account Manager*) accounts, and secrets used by the operating system. With that file an adversary can decrypt 
+and secrets used by the operating system. With that file an adversary can decrypt 
 password hashes stored in the database.
 
 **What can an adversary do with this?**
